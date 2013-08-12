@@ -1,0 +1,194 @@
+{# Nbs/Bundle/CVBundle/Resources/views/Default/index.html.twig #}
+
+{% extends "::base.html.twig" %}
+
+{# stylesheets #}
+{% block stylesheets %}
+{% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+{% endstylesheets %}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar collapsed" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="brand">Curriculum Vitae</a>
+          <ul class="nav">
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              {{ language.dropdownTitle }} <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                {% for item in language.items %}
+                <li><a href="{{ path('nbs_cv_local', {'_locale': item.attribute } ) }}">{{ item.value }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-collapse collapse" style="height: 0px;">
+            <ul class="nav">
+              {% for item in anchors %}
+              <li class="">
+                <a href="#{{ item.href }}">{{ item.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="CurriculumVitae" class="container">
+        <div id="{{ identity.Anchor }}" class="media">
+            <span class="pull-left">
+                {% image '@NbsCVBundle/Resources/public/img/fabien.crassat.png' filter='optipng, cssrewrite' %}
+                <img class="img-circle pull-right" src="{{ asset_url }}" alt="Fabien Crassat"/>
+                {% endimage %}
+            </span>
+            <div class="media-body">
+                <h1 class="media-heading">{{ identity.Name }}</h1>
+                <p class="lead">{{ lookingFor.experience }}</p>
+                <div class="label label-info">{{ lookingFor.presentation }}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span6">
+            <section class="well well-large">
+                <h3>{{ identity.AnchorTitle }}</h3>
+                <address>
+                <i class="icon-map-marker"></i> <a target="_blank" href="{{ identity.GoogleMap }}">{{ identity.City }}, {{ identity.Country }}</a>
+                <!-- <br><abbr title="Mobile">M:</abbr> {{ identity.Mobile }} -->
+                <br><abbr title="Email"><i class="icon-envelope"></i></abbr> <a _blank href="mailto:{{ identity.Email }}">{{ identity.Email }}</a>
+                {% if identity.BirthDay is defined and identity.BrithPlace is defined %}
+                    <br> Né le {{ identity.BirthDay }} à {{ identity.BrithPlace }}
+                {% endif %}
+                {% if identity.Age is defined %}
+                    <br>Age: {{ identity.Age }}
+                {% endif %}
+                {% if identity.Nationality is defined %}
+                    <br>{{ identity.Nationality }}
+                {% endif %}
+                {% if identity.Marital is defined %}
+                    <br>{{ identity.Marital }}
+                {% endif %}
+                {% if identity.Military is defined %}
+                    <br>{{ identity.Military }}
+                {% endif %}
+                <br>{{ identity.DriveLicences }}
+                </address>
+            </section>
+            </div>
+
+            <div class="span6">
+            <section id="{{ followMe.Anchor }}" class="well well-large">
+                <h3>{{ followMe.AnchorTitle }}</h3>
+                {% for line in followMe.follows %}
+                    <a href="{{ line.url }}" class="linkimage" target="_blank">
+                        <img src="{{ asset('' ~ line.icon) }}" alt="{{ line.title }}"/>
+                    </a>
+                {% endfor %}
+            </section>
+            </div>
+        </div>
+
+        <section id="{{ experiences.Anchor }}" class="well well-large">
+            <h3>{{ experiences.AnchorTitle }}</h3>
+            <dl class="timeline">
+            {% for line in experiences.Experiences %}
+                <dt><span class="label">{{ line.date }}</span></dt>
+                <dd>
+                    <strong>{{ line.experience }}</strong>
+                    <br><a href="{{ society[0][line.society].siteurl }}">{{ society[0][line.society].name }}</a>, <small>{{ society[0][line.society].address }}</small>
+                    {% for item in line.missions %}
+                    <br><small>- {{ item }}</small>
+                    {% endfor %}
+                </dd>
+            {% endfor %}
+            </dl>
+        </section>
+        
+        <section id="{{ skills.Anchor }}" class="well well-large">
+            <h3>{{ skills.AnchorTitle }}</h3>
+            <dl class="dl-horizontal">
+            {% for categories in skills.Skills %}
+                <dt>{{ categories.title }}</dt>
+                <dd>
+                {% for line in categories.lines %}
+                {{ line.title }}
+                <div class="progress {% if line.striped == 'true' %} progress-striped {% endif %} progress-{{ line.class }}">
+                    <div class="bar" style="width:{{ line.percentage }}%;"></div>
+                </div>
+                {% endfor %}
+                </dd>
+            {% endfor %}
+            </dl>
+        </section>
+
+        <section id="{{ educations.Anchor }}" class="well well-large">
+            <h3>{{ educations.AnchorTitle }}</h3>
+            <dl class="timeline">
+            {% for line in educations.Educations %}
+                <dt><span class="label">{{ line.date }}</span></dt>
+                <dd>
+                    {{ line.education }}
+                    {% for item in line.descriptions %}
+                    <br><small>- {{ item }}</small>
+                    {% endfor %}
+                </dd>
+            {% endfor %}
+            </dl>
+        </section>
+        
+        <section id="{{ languageSkills.Anchor }}" class="well well-large">
+            <h3>{{ languageSkills.AnchorTitle }}</h3>
+            <div class="row">
+            {% for line in languageSkills.LanguageSkills %}
+            <div class="span5 {% if loop.index == 1 %} offset1 {% endif %}">
+                <div class="pull-left" href="#">
+                    <img class="media-object" src="{{ asset('' ~ line.icon) }}" alt="{{ line.title }}">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{ line.title }}</h4>
+                    {{ line.description }}
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </section>
+
+        <section id="{{ miscellaneous.Anchor }}" class="well well-large">
+            <h3>{{ miscellaneous.AnchorTitle }}</h3>
+            <dl class="dl-horizontal">
+            {% for line in miscellaneous.Items %}
+                <dt>{{ line.title }}</dt>
+                <dd>
+                    {{ line.miscellaneous }}
+                    {% if line.description is defined %}
+                    <br><small>{{ line.description }}</small>
+                    {% endif %}
+                </dd>
+            {% endfor %}
+            </dl>
+        </section>
+    </div>
+
+<!--
+     <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <p><small>Designed and built by @webmaster</small></p>
+        </div>
+      </div>
+    </div>
+ -->
+
+{% endblock %}

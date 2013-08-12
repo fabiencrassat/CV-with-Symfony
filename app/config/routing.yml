@@ -1,0 +1,9 @@
+nbs_cv:
+    resource: "@NbsCVBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# TEMPORARY FOR DEBUG THE PROD SITE
+# Need to move to routing_dev.yml
+_console:
+    resource: "@CoreSphereConsoleBundle/Resources/config/routing.yml"
+    prefix: /_console
