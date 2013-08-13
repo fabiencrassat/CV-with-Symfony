@@ -1,3 +1,10 @@
+# Personal #
+############
+*.bat
+
+# Symfony2 #
+############
+
 # Bootstrap
 app/bootstrap*
 
@@ -17,7 +24,6 @@ app/config/parameters.yml.*
 phpunit
 
 
-
 # Compiled source #
 ###################
 *.com
@@ -26,6 +32,7 @@ phpunit
 *.exe
 *.o
 *.so
+
 
 # Packages #
 ############
@@ -40,11 +47,13 @@ phpunit
 *.tar
 *.zip
 
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
+
 
 # OS generated files #
 ######################
