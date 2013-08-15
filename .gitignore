@@ -1,6 +1,7 @@
 # Personal #
 ############
 *.bat
+*.tmp
 
 # Symfony2 #
 ############
