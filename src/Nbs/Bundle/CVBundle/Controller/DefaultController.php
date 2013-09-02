@@ -9,11 +9,12 @@ use Nbs\Bundle\CVBundle\Entity\CurriculumVitae;
 
 class DefaultController extends Controller
 {
-    public function indexAction($_locale)
+    public function indexAction($cvxmlfile, $_locale)
     {
+        $FileToLoad = (string) $cvxmlfile;
         $Lang = (string) $_locale;
 
-        $XML = new CurriculumVitae($Lang);
+        $XML = new CurriculumVitae($FileToLoad, $Lang);
 
         return $this->render('NbsCVBundle:Default:index.html.twig', array(
             'language'          => $XML->getDropDownLanguages(),

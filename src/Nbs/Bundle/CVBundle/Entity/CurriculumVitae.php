@@ -11,7 +11,7 @@ class CurriculumVitae
 	private $Lang;
 	private $CV;
 
-	public function __construct($Lang = 'en', $file = 'fabien')
+	public function __construct($file = 'fabien', $Lang = 'en')
 	{
 		$this->Lang = $Lang;
 		$this->CV = $this->getXmlCurriculumVitae($Lang, $file);
