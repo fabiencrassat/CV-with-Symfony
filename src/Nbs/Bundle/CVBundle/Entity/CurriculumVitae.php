@@ -29,7 +29,7 @@ class CurriculumVitae
         };
 
         $language = array(
-            'dropdownTitle' => (string) $this->CV->languages->title->{ $this->Lang },
+            'dropdownTitle' => $this->getValue("languages/title"),
             'items'         => $dropdownItems
         );
 
@@ -44,7 +44,7 @@ class CurriculumVitae
         foreach ($anchorsAttribute as $key => $value) {
             $anchors[$i++] = array(
                 'href'  => (string) $value['anchor'],
-                'title' => (string) $value->AnchorTitle->{ $this->Lang }
+                'title' => $this->getValue("CurriculumVitae/". $value['anchor']. "/AnchorTitle")
             );
         };
 
@@ -98,7 +98,7 @@ class CurriculumVitae
         $experience = (string) $experience[0]->{ $this->Lang };
         $followMe = array(
             'experience'    => $experience,
-            'presentation'  => (string) $this->CV->CurriculumVitae->lookingFor->presentation->{ $this->Lang },
+            'presentation'  => $this->getValue("CurriculumVitae/lookingFor/presentation"),
         );
 
         return $followMe;
@@ -117,7 +117,7 @@ class CurriculumVitae
 
         $followMe = array(
             'Anchor'        => (string) $this->CV->CurriculumVitae->followMe['anchor'],
-            'AnchorTitle'   => (string) $this->CV->CurriculumVitae->followMe->AnchorTitle->{ $this->Lang },
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/followMe/AnchorTitle"),
             'follows'       => $items
         );
 
@@ -170,50 +170,8 @@ class CurriculumVitae
 
         return $experiences = array(
             'Anchor'        => (string) $this->CV->CurriculumVitae->experiences['anchor'],
-            'AnchorTitle'   => (string) $this->CV->CurriculumVitae->experiences->AnchorTitle->{ $this->Lang },
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/experiences/AnchorTitle"),
             'Experiences'   => $items
-        );
-    }
-
-    public function getEducations()
-    {
-        $items_children = $this->CV->CurriculumVitae->educations->items->children();
-        $items = array();
-        foreach ($items_children as $key => $item) {
-            $description = array();
-            foreach ($item as $itemKey => $value) {
-                if ($value->count() == 0) {
-                    # il n'y a plus d'enfant
-                    $description = array_merge($description,
-                        array($itemKey => (string) $value)
-                    );
-                } else {
-                    # il y a des enfants avec les balises de langues
-                    if ($value->{ $this->Lang }->children()->count() == 0) {
-                        $lines = (string) $value->{ $this->Lang };
-                    } else {
-                        $lines = array();
-                        $descriptions = $value->{ $this->Lang }->children();
-                        foreach ($descriptions as $lineKey => $line) {
-                            $lines = array_merge($lines,
-                                array((string) $line)
-                            );
-                        }
-                    }
-                    $description = array_merge($description,
-                        array($itemKey => $lines)
-                    );
-                }
-            };
-            $items = array_merge($items,
-                array($key => $description)
-            );
-        };
-
-        return array(
-            'Anchor'        => (string) $this->CV->CurriculumVitae->educations['anchor'],
-            'AnchorTitle'   => (string) $this->CV->CurriculumVitae->educations->AnchorTitle->{ $this->Lang },
-            'Educations'    => $items
         );
     }
 
@@ -264,8 +222,57 @@ class CurriculumVitae
 
         return array(
             'Anchor'            => (string) $this->CV->CurriculumVitae->skills['anchor'],
-            'AnchorTitle'       => (string) $this->CV->CurriculumVitae->skills->AnchorTitle->{ $this->Lang },
+            'AnchorTitle'       => $this->getValue("CurriculumVitae/skills/AnchorTitle"),
             'Skills'            => $items
+        );
+    }
+
+    public function getEducations()
+    {
+        $items_children = $this->CV->CurriculumVitae->educations->items->children();
+        $items = array();
+        foreach ($items_children as $key => $item) {
+            $description = array();
+            foreach ($item as $itemKey => $value) {
+                var_dump($itemKey);
+                var_dump($value);
+                if ($value->count() == 0) {
+                    # il n'y a plus d'enfant
+                    $description = array_merge($description,
+                        array($itemKey => (string) $value)
+                    );
+                } else {
+                    # il y a des enfants avec les balises de langues
+                    if ($value->children()->count() == 0) {
+                        $lines = $this->getValue("CurriculumVitae/educations/items/". $key ."/". $itemKey);
+                    } else {
+                        $lines = array();
+                        $descriptions = $value->children();
+                        foreach ($descriptions as $lineKey => $line) {
+/*                            $lines = array_merge($lines,
+                                array((string) $line)
+                            );
+*/                            $lines = array_merge($lines,
+                                array($itemKey =>
+                                    array($this->getValue("CurriculumVitae/educations/items/". $key ."/". $itemKey ."/". $lineKey))
+                                )
+                            );
+                        }
+                    }
+                    $description = array_merge($description,
+                        array($itemKey => $lines)
+                    );
+                }
+            };
+            $items = array_merge($items,
+                array($key => $description)
+            );
+        };
+
+        return array(
+            'Anchor'        => (string) $this->CV->CurriculumVitae->educations['anchor'],
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/educations/AnchorTitle"),
+            'Educations'    => $items
         );
     }
 
@@ -276,27 +283,17 @@ class CurriculumVitae
         foreach ($items_children as $key => $item) {
             $description = array();
             foreach ($item as $itemKey => $value) {
-                if ($value->count() == 0) {
-                    # il n'y a plus d'enfant
-                    $description = array_merge($description,
-                        array($itemKey => (string) $value)
-                    );
-                } else {
-                    # il y a des enfants avec les balises de langues
-                    $description = array_merge($description,
-                        array($itemKey => (string) $value->{ $this->Lang })
-                    );
-                }
+                $description = array_merge($description,
+                    array($itemKey => $this->getValue("CurriculumVitae/languageSkills/items/". $key ."/". $itemKey))
+                );
             };
-            $items = array_merge($items,
-                array($key => $description)
-            );
+            $items = array_merge($items, array($key => $description));
         };
 
-        return  array(
-            'Anchor'            => (string) $this->CV->CurriculumVitae->languageSkills['anchor'],
-            'AnchorTitle'       => (string) $this->CV->CurriculumVitae->languageSkills->AnchorTitle->{ $this->Lang },
-            'LanguageSkills'    => $items,
+        return array(
+            'Anchor'        => (string) $this->CV->CurriculumVitae->languageSkills['anchor'],
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/languageSkills/AnchorTitle"),
+            'Items'         => $items,
         );
     }
 
@@ -307,24 +304,16 @@ class CurriculumVitae
         foreach ($items_children as $key => $item) {
             $description = array();
             foreach ($item as $itemKey => $value) {
-                if ($value->count() == 0) {
-                    # il n'y a plus d'enfant
-                    $description = array_merge($description,
-                        array($itemKey => (string) $value)
-                    );
-                } else {
-                    # il y a des enfants avec les balises de langues
-                    $description = array_merge($description,
-                        array($itemKey => (string) $value->{ $this->Lang })
-                    );
-                }
+                $description = array_merge($description,
+                    array($itemKey => $this->getValue("CurriculumVitae/miscellaneous/items/". $key ."/". $itemKey))
+                );
             };
             $items = array_merge($items, array($key => $description));
         };
 
         return array(
             'Anchor'        => (string) $this->CV->CurriculumVitae->miscellaneous['anchor'],
-            'AnchorTitle'   => (string) $this->CV->CurriculumVitae->miscellaneous->AnchorTitle->{ $this->Lang },
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/miscellaneous/AnchorTitle"),
             'Items'         => $items,
         );
     }
@@ -377,4 +366,43 @@ class CurriculumVitae
 
         return $age;
     }
-}
+
+    private function getValue($XPath)
+    {
+        $value = "";
+        // Looking for "lang" attribute
+        $values = $this->CV->xpath($XPath ."[attribute::lang='". $this->Lang ."']");
+        if (count($values) == 1) {
+            foreach ($values as $key => $value) {
+                $value = (string) $value;
+            }
+        }
+        // No "Lang" attribute
+        elseif (count($values) == 0) {
+            // Retrieve the value of the path
+            $values = $this->CV->xpath($XPath);
+            if (count($values) == 1) {
+                foreach ($values as $key => $value) {
+                    $value = (string) $value;
+                }
+            }
+            // No value, perhaps chidren?
+            elseif (count($value) > 0) {
+                foreach ($values as $key => $value) {
+                    $value = (string) $value;
+                }
+            }
+            // Something is wrong!
+            else {
+                var_dump($values);
+                throw new InvalidArgumentException("The value does not exist in this path: ". $XPath .".");
+            }
+        }
+        // Something is wrong!
+        else {
+            var_dump($values);
+            throw new InvalidArgumentException("The attribute lang (". $this->Lang .") is not unique in this path: ". $XPath .".");
+        }
+        return $value;
+    }
+};

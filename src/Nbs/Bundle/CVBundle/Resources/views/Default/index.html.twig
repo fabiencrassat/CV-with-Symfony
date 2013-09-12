@@ -28,7 +28,7 @@
               </a>
               <ul class="dropdown-menu">
                 {% for item in language.items %}
-                <li><a href="{{ path('nbs_cv_local', {'_locale': item.attribute } ) }}">{{ item.value }}</a></li>
+                <li><a href="{{ path('nbs_cv_local', {'_locale': item.attribute, 'cvxmlfile': cvxmlfile } ) }}">{{ item.value }}</a></li>
                 {% endfor %}
               </ul>
             </li>
@@ -151,7 +151,7 @@
         <section id="{{ languageSkills.Anchor }}" class="well well-large">
             <h3>{{ languageSkills.AnchorTitle }}</h3>
             <div class="row">
-            {% for line in languageSkills.LanguageSkills %}
+            {% for line in languageSkills.Items %}
             <div class="span5 {% if loop.index == 1 %} offset1 {% endif %}">
                 <div class="pull-left" href="#">
                     <img class="media-object" src="{{ asset('' ~ line.icon) }}" alt="{{ line.title }}">

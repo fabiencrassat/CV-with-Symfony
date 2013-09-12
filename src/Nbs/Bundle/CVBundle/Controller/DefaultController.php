@@ -17,6 +17,7 @@ class DefaultController extends Controller
         $XML = new CurriculumVitae($FileToLoad, $Lang);
 
         return $this->render('NbsCVBundle:Default:index.html.twig', array(
+            'cvxmlfile'         => $cvxmlfile,
             'language'          => $XML->getDropDownLanguages(),
             'anchors'           => $XML->getAnchors(),
             'identity'          => $XML->getIdentity(),
