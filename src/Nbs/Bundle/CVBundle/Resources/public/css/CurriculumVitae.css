@@ -4,18 +4,22 @@
     }
 }
 @media (max-width: 767px) {
-    section#languageSkills .span5 {
+    #languageSkills .span5 {
         float: left;
     }
 }
 
-div#identity .label {
+.img-circle {
+    border-radius: 6px;
+}
+
+#identity .label {
     white-space: normal;
     padding: 10px;
     line-height: 15px;
 }
 
-a.linkimage {
+.linkimage {
     text-decoration: none;
 }
 
