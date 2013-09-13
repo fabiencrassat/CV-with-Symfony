@@ -10,13 +10,7 @@
 }
 
 .img-circle {
-    .border-radius(6px)
-}
-
-.border-radius(@radius){
-    border-radius: @radius;
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
+    border-radius: 6px;
 }
 
 #identity .label {
