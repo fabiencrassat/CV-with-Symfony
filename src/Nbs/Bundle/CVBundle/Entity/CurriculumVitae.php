@@ -60,9 +60,13 @@ class CurriculumVitae
             foreach ($description as $itemKey => $value) {
                 $attributes = (array) $value->attributes();
                 if ($value->children()->count() == 0 && count($attributes) == 0) {
-                    $items = array_merge($items, array($itemKey => (string) $value));
+                    $items = array_merge($items,
+                        array($itemKey => (string) $value)
+                    );
                 } elseif ($value->children()->{ $this->Lang }) {
-                    $items = array_merge($items, array($itemKey => (string) $value->children()->{ $this->Lang }));
+                    $items = array_merge($items,
+                        array($itemKey => (string) $value->children()->{ $this->Lang })
+                    );
                 } elseif ($value->children()->count() == 0 && count($attributes) <> 0) {
                     if ($this->Lang == 'en') {
                         $format = $attributes['@attributes']['format'];
@@ -84,7 +88,7 @@ class CurriculumVitae
 
         $identity = array(
             'Anchor'        => (string) $this->CV->CurriculumVitae->identity['anchor'],
-            'AnchorTitle'   => (string) $this->CV->CurriculumVitae->identity->AnchorTitle->{ $this->Lang },
+            'AnchorTitle'   => $this->getValue("CurriculumVitae/identity/AnchorTitle"),
         );
         $identity = array_merge($identity, $items);
 
@@ -234,8 +238,6 @@ class CurriculumVitae
         foreach ($items_children as $key => $item) {
             $description = array();
             foreach ($item as $itemKey => $value) {
-                var_dump($itemKey);
-                var_dump($value);
                 if ($value->count() == 0) {
                     # il n'y a plus d'enfant
                     $description = array_merge($description,
@@ -243,19 +245,14 @@ class CurriculumVitae
                     );
                 } else {
                     # il y a des enfants avec les balises de langues
-                    if ($value->children()->count() == 0) {
-                        $lines = $this->getValue("CurriculumVitae/educations/items/". $key ."/". $itemKey);
+                    if ($value->{ $this->Lang }->children()->count() == 0) {
+                        $lines = (string) $value->{ $this->Lang };
                     } else {
                         $lines = array();
-                        $descriptions = $value->children();
+                        $descriptions = $value->{ $this->Lang }->children();
                         foreach ($descriptions as $lineKey => $line) {
-/*                            $lines = array_merge($lines,
+                            $lines = array_merge($lines,
                                 array((string) $line)
-                            );
-*/                            $lines = array_merge($lines,
-                                array($itemKey =>
-                                    array($this->getValue("CurriculumVitae/educations/items/". $key ."/". $itemKey ."/". $lineKey))
-                                )
                             );
                         }
                     }
