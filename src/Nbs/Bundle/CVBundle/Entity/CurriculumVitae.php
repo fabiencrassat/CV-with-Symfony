@@ -108,7 +108,7 @@ class CurriculumVitae
                 }
             } elseif ($attributeKey == "crossref") {
                 $CVCrossRef = $this->CV;
-                $tabtemp = split("/", $valuetemp);
+                $tabtemp = explode("/", $valuetemp);
                 foreach ($tabtemp as $val) {
                     $CVCrossRef = $CVCrossRef->{ $val };
                 }
@@ -136,7 +136,7 @@ class CurriculumVitae
                 $attr = array();
             } elseif ($key == 'Age') {
                 $CVCrossRef = $this->CV;
-                $tabtemp = split("/", $valuetemp);
+                $tabtemp = explode("/", $valuetemp);
                 foreach ($tabtemp as $val) {
                     $CVCrossRef = $CVCrossRef->{ $val };
                 }
