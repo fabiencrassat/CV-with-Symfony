@@ -67,7 +67,7 @@
                 <address>
                 <i class="icon-map-marker"></i> <a target="_blank" href="{{ identity.address.GoogleMap }}">{{ identity.address.City }}, {{ identity.address.Country }}</a>
                 {# <br><abbr title="Mobile">M:</abbr> {{ identity.contact.Mobile }} #}
-                <br><abbr title="Email"><i class="icon-envelope"></i></abbr> <a _blank href="mailto:{{ identity.contact.Email }}">{{ identity.contact.Email }}</a>
+                <br><abbr title="Email"><i class="icon-envelope"></i></abbr> <a href="mailto:{{ identity.contact.Email }}">{{ identity.contact.Email }}</a>
                 {% if identity.myself.BirthDay is defined and identity.myself.BrithPlace is defined %}
                     <br> Né le {{ identity.myself.BirthDay }} à {{ identity.myself.BrithPlace }}
                 {% endif %}
