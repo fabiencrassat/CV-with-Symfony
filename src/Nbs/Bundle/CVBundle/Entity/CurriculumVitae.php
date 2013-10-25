@@ -81,7 +81,7 @@ class CurriculumVitae
         return $this->xml2array($this->CV->Society);
     }
 
-    private function xml2array($xml, $depth = 0, $debug = false, $format = true) {
+    private function xml2array($xml, $depth = 0, $format = true) {
         if ($depth >= $this->nMaxRecursiveDepth) {
             throw new InvalidArgumentException("The recursive funtion xml2array (depth=" . $depth . ") is too high.");
         } else {
@@ -112,7 +112,7 @@ class CurriculumVitae
                 foreach ($tabtemp as $val) {
                     $CVCrossRef = $CVCrossRef->{ $val };
                 }
-                $cr = $this->xml2array($CVCrossRef, NULL);
+                $cr = $this->xml2array($CVCrossRef);
                 if (count($cr) == 1) {
                     $cr = implode("", $cr);
                 }
@@ -140,7 +140,7 @@ class CurriculumVitae
                 foreach ($tabtemp as $val) {
                     $CVCrossRef = $CVCrossRef->{ $val };
                 }
-                $cr = $this->xml2array($CVCrossRef, NULL, NULL, FALSE);
+                $cr = $this->xml2array($CVCrossRef, NULL, FALSE);
                 if (count($cr) == 1) {
                     $cr = implode("", $cr);
                 }

@@ -27,4 +27,4 @@ nbs_cv_local:
         cvxmlfile:      fabien
     requirements:
         _locale:        en|fr
-        cvxmlfile:      fabien|test
+        cvxmlfile:      fabien|example
