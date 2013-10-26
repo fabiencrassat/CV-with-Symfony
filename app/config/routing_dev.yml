@@ -12,3 +12,9 @@ _configurator:
 
 _main:
     resource: routing.yml
+
+# TEMPORARY FOR DEBUG THE PROD SITE
+# Need to move to routing_dev.yml
+_console:
+    resource: "@CoreSphereConsoleBundle/Resources/config/routing.yml"
+    prefix: /_console
