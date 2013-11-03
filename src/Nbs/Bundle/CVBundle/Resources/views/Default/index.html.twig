@@ -1,10 +1,11 @@
 {# Nbs/Bundle/CVBundle/Resources/views/Default/index.html.twig #}
 
-{% extends "::base.html.twig" %}
+{% extends "NbsCVBundle::base.html.twig" %}
 
 {# stylesheets #}
 {% block stylesheets %}
-{% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
+{{ parent() }}
+{% stylesheets 'bundles/nbscv/css/CurriculumVitae.css' filter='?yui_css, cssrewrite' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
 {% endstylesheets %}
 {% endblock %}
@@ -182,6 +183,10 @@
     </div>
     
     {# Contact Me button and popup #}
+    {% trans_default_domain 'MremiContactBundle' %}
+    <a href="{{ path('mremi_contact_form') }}" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
+        {{ 'mremi_contact.form_page_title'|trans }}
+    </a>
 {#     <a href="{{ path('nbs_cv_contact') }}" data-target="#modalContact" role="button" data-toggle="modal" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
         Contact Me
     </a>

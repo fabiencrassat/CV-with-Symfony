@@ -14,27 +14,25 @@
 {% block favicon %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 {% endblock %}
+
 {# stylesheets #}
-{% stylesheets filter='?yui_css' combine=true '@bootstrap_css' %}
-        <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
-{% endstylesheets %}
-{% stylesheets filter='cssrewrite,?yui_css' combine=true '@base_css' %}
+{% stylesheets '@base_css' filter='cssrewrite,?yui_css' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
 {% endstylesheets %}
 {% block stylesheets %}{% endblock %}
-{# javascripts #}
-{% javascripts '../vendor/jquery/jquery/jquery-1.9.1.min.js' '@bootstrap_js' filter='?yui_js' combine=true %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% block javascripts %}{% endblock %}
+
 {# extension #}
 {% block head %}{% endblock %}
     </head>
 
+{# body #}
     <body data-spy="scroll" data-target=".navbar">
         {% block body %}
-            Hello!
+            It is the main body block from ::base.html.twig
         {% endblock %}
     </body>
+
+{# javascripts #}
+{% block javascripts %}{% endblock %}
 
 </html>

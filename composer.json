@@ -22,7 +22,8 @@
         "twitter/bootstrap": "2.3.1",
         "leafo/lessphp": "*",
         "coresphere/console-bundle": "0.1.0",
-        "jquery/jquery": "1.9.1"
+        "jquery/jquery": "1.9.1",
+        "mremi/contact-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

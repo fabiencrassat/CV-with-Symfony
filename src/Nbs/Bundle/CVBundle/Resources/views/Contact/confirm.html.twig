@@ -1,0 +1,34 @@
+{#
+
+This file is part of the Mremi\ContactBundle Symfony bundle.
+
+(c) Rémi Marseille <marseille.remi@gmail.com>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends "NbsCVBundle::contact.html.twig" %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+
+{% block title %}{{ 'mremi_contact.confirm_page_title'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap.min.css') }}" type="text/css" media="screen"  />
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block contactbody %}
+    <section class="well well-large" style="margin-top:20px;">
+        <h3>{{ 'mremi_contact.confirm_title'|trans({
+            '%title%':    contact.titleValue|trans,
+            '%fullName%': contact.fullName
+        }) }}</h3>
+        <p>{{ 'mremi_contact.confirm_message'|trans }}</p>
+        <a href="{{ path('nbs_cv_homepage') }}" class="btn btn-default">
+            <span class="glyphicon glyphicon-chevron-left"></span> Retour
+        </a>
+    </section>
+{% endblock contactbody %}

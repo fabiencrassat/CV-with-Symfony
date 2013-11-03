@@ -16,8 +16,10 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Nbs\Bundle\CVBundle\NbsCVBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
+            new Mremi\ContactBundle\MremiContactBundle(),
+            new Mremi\BootstrapBundle\MremiBootstrapBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -26,6 +28,11 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             // $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
         }
+
+        // The last translation file always wins.
+        // That mean that you need to make sure that the bundle containing your translations is loaded
+        // after any bundle whose translations you're overriding.
+        $bundles[] = new Nbs\Bundle\CVBundle\NbsCVBundle();
 
         return $bundles;
     }
