@@ -127,10 +127,7 @@ class CurriculumVitae
 
             if ($key == 'BirthDay') {
                 if ($format) {
-                    // setlocale(LC_TIME, 'fr_FR.UTF8');
-                    // setlocale(LC_TIME, 'fr_FR');
-                    // setlocale(LC_TIME, 'fr');
-                    setlocale(LC_TIME, 'fra_fra');
+                    setlocale(LC_TIME, array('fra_fra', 'fr', 'fr_FR', 'fr_FR.UTF8'));
                     $value = strftime('%d %B %Y', strtotime(date($value)));
                 }
                 $attr = array();
