@@ -77,7 +77,7 @@
             </FirstExperience>
             <SecondExperience>
                 <date>Sept - Dec 2006</date>
-                <job lang="en">Mu previsous job</job>
+                <job lang="en">My previsous job</job>
                 <job lang="fr">Mon poste précédent</job>
                 <society crossref="Society/MyCompany"></society>
                 <missions lang="en">
