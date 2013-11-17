@@ -34,6 +34,7 @@ class DefaultController extends Controller
             'languageSkills'    => $this->ReadCVXml->getLanguageSkills(),
             'miscellaneous'     => $this->ReadCVXml->getMiscellaneous(),
             'society'           => $this->ReadCVXml->getSociety(),
+            '_robotindex'       => "index"
         ));
     }
 

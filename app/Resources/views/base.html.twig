@@ -5,7 +5,7 @@
     <head>
 {# meta #}
         <meta http-equiv="Content-Type" content="text/html; charset={% if _charset is defined %}{{ _charset }}{% else %}utf-8{% endif %}"/>
-        <meta name="robots" content="noindex,nofollow" />
+        <meta name="robots" content="{% if _robotindex is defined %}{{ _robotindex }}{% else %}noindex{% endif %},nofollow" />
         <meta charset="{% if _charset is defined %}{{ _charset }}{% else %}UTF-8{% endif %}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {# title #}
