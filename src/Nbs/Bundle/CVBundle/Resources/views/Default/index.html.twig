@@ -2,15 +2,14 @@
 
 {% extends "::base.html.twig" %}
 
-{# stylesheets #}
-{% block stylesheets %}
-{% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
-        <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
-{% endstylesheets %}
+{% block head_css %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
 {% endblock %}
 
-
-{% block body %}
+{% block body_container_main %}
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Nbs\Bundle\CVBundle\NbsCVBundle(),
             new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
+            new Oryzone\Bundle\BoilerplateBundle\OryzoneBoilerplateBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

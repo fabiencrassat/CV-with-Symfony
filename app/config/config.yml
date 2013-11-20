@@ -22,10 +22,16 @@ framework:
     session:         ~
     fragments:       ~
 
+# Assetic Configuration
+assetic:
+    bundles:        ["OryzoneBoilerplateBundle"]
+
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    globals:
+        bp_language: %locale%
 
 # Doctrine Configuration
 doctrine:

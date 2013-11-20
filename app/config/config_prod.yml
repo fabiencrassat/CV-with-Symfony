@@ -21,3 +21,8 @@ monolog:
             type:  stream
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
+
+twig:
+    globals:
+        bp_analytics_id: %google_analytics_id%
+        bp_analytics_domain: %google_analytics_domain%

@@ -3,8 +3,195 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "cdec990a7701fe3388fa3b77a7b7a7a9",
+    "hash": "77dd5518ffa9c8f297444c4b500c22de",
     "packages": [
+        {
+            "name": "components/html5-boilerplate",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/html5-boilerplate.git",
+                "reference": "5e639ba074a2a9da46d637f27a70097196592ac1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/html5-boilerplate/zipball/5e639ba074a2a9da46d637f27a70097196592ac1",
+                "reference": "5e639ba074a2a9da46d637f27a70097196592ac1",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.9.1",
+                "components/modernizr": ">=2.6.2",
+                "components/normalize.css": "1.*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "styles": [
+                        "css/main.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.",
+            "homepage": "http://html5boilerplate.com",
+            "keywords": [
+                "CSS3",
+                "HTML5"
+            ],
+            "time": "2013-09-11 04:44:47"
+        },
+        {
+            "name": "components/jquery",
+            "version": "1.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "6b2390db24ba3490ca75251eec4888f7342bf4da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/6b2390db24ba3490ca75251eec4888f7342bf4da",
+                "reference": "6b2390db24ba3490ca75251eec4888f7342bf4da",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery-migrate.js",
+                        "jquery-migrate.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com",
+                    "homepage": "http://ejohn.org/"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2013-07-04 15:59:41"
+        },
+        {
+            "name": "components/modernizr",
+            "version": "2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/modernizr.git",
+                "reference": "c470050f9906b1197ddaa7aace41f73eba5f4ecf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/modernizr/zipball/c470050f9906b1197ddaa7aace41f73eba5f4ecf",
+                "reference": "c470050f9906b1197ddaa7aace41f73eba5f4ecf",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "modernizr.js"
+                    ],
+                    "shim": {
+                        "exports": "window.Modernizr"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Modernizr",
+                    "homepage": "http://modernizr.com"
+                },
+                {
+                    "name": "Faruk Ates"
+                },
+                {
+                    "name": "Paul Irish"
+                },
+                {
+                    "name": "Alex Sexton"
+                },
+                {
+                    "name": "Ryan Seddon"
+                },
+                {
+                    "name": "Alexander Farkas"
+                },
+                {
+                    "name": "Ben Alman"
+                },
+                {
+                    "name": "Stu Cox"
+                }
+            ],
+            "description": "Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user's browser.",
+            "homepage": "http://modernizr.com",
+            "keywords": [
+                "CSS3",
+                "HTML5",
+                "browser",
+                "feature detection"
+            ],
+            "time": "2013-03-31 12:34:31"
+        },
+        {
+            "name": "components/normalize.css",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/normalize.css.git",
+                "reference": "979bb1d1710554f8c298544d39d985310c2f5070"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/normalize.css/zipball/979bb1d1710554f8c298544d39d985310c2f5070",
+                "reference": "979bb1d1710554f8c298544d39d985310c2f5070",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "name": "normalize-css",
+                    "styles": [
+                        "normalize.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
+            "homepage": "http://necolas.github.com/normalize.css/",
+            "time": "2013-10-24 03:37:49"
+        },
         {
             "name": "coresphere/console-bundle",
             "version": "0.1.0",
@@ -660,6 +847,77 @@
             "time": "2013-05-11 07:51:12"
         },
         {
+            "name": "genemu/form-bundle",
+            "version": "v2.2.1",
+            "target-dir": "Genemu/Bundle/FormBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/genemu/GenemuFormBundle.git",
+                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/78fcd307a69b499241d7f0fa5c1b378e77358f16",
+                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "1.*",
+                "doctrine/mongodb-odm-bundle": "*",
+                "doctrine/orm": "2.*",
+                "phpunit/phpunit": "3.7.*",
+                "propel/propel-bundle": "*",
+                "symfony/doctrine-bridge": "~2.3",
+                "symfony/finder": "2.*"
+            },
+            "suggest": {
+                "symfony/doctrine-bundle": "In order to use some form types with Doctrine",
+                "symfony/finder": "For an image type",
+                "symfony/mongodb-odm-bundle": "For MongoDB integration",
+                "symfony/twig-bridge": "For integration into Twig templates"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Genemu\\Bundle\\FormBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Chauvel",
+                    "email": "olivier@generation-multiple.com"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/genemu/GenemuFormBundle/contributors"
+                },
+                {
+                    "name": "Bilal Amarni",
+                    "email": "bilal.amarni@gmail.com"
+                }
+            ],
+            "description": "Extra form types for your Symfony2 projects",
+            "keywords": [
+                "extra form",
+                "form"
+            ],
+            "time": "2013-07-31 22:28:58"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.0.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -945,6 +1203,162 @@
             "time": "2013-07-28 22:38:30"
         },
         {
+            "name": "mremi/bootstrap-bundle",
+            "version": "v3.0.2",
+            "target-dir": "Mremi/BootstrapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mremi/BootstrapBundle.git",
+                "reference": "79b6188e07f4eaf809c57007097cb2d8343f7c3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mremi/BootstrapBundle/zipball/79b6188e07f4eaf809c57007097cb2d8343f7c3f",
+                "reference": "79b6188e07f4eaf809c57007097cb2d8343f7c3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Mremi\\BootstrapBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rémi Marseille",
+                    "email": "marseille.remi@gmail.com"
+                }
+            ],
+            "description": "A simple way to add the Bootstrap framework in a Symfony2 project",
+            "homepage": "https://github.com/mremi/BootstrapBundle",
+            "keywords": [
+                "Symfony2",
+                "bootstrap",
+                "css",
+                "javascript"
+            ],
+            "time": "2013-11-17 15:55:12"
+        },
+        {
+            "name": "mremi/contact-bundle",
+            "version": "dev-master",
+            "target-dir": "Mremi/ContactBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mremi/ContactBundle.git",
+                "reference": "52c2ebb818f3e842b10909acbaec441b3a2446c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/52c2ebb818f3e842b10909acbaec441b3a2446c0",
+                "reference": "52c2ebb818f3e842b10909acbaec441b3a2446c0",
+                "shasum": ""
+            },
+            "require": {
+                "genemu/form-bundle": "~2.2",
+                "mremi/bootstrap-bundle": "~3.0",
+                "php": ">=5.3.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "suggest": {
+                "mremi/templating-extra-bundle": "In order to profile pages, get some statistics and enhance front office development"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Mremi\\ContactBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rémi Marseille",
+                    "email": "marseille.remi@gmail.com"
+                }
+            ],
+            "description": "Implementation of a contact form for Symfony2",
+            "homepage": "https://github.com/mremi/ContactBundle",
+            "keywords": [
+                "Symfony2",
+                "contact",
+                "form"
+            ],
+            "time": "2013-11-17 16:04:47"
+        },
+        {
+            "name": "oryzone/boilerplate-bundle",
+            "version": "v4.3.0",
+            "target-dir": "Oryzone/Bundle/BoilerplateBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Oryzone/OryzoneBoilerplateBundle.git",
+                "reference": "c771961448d96222c79de88172bd4a769e64798c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Oryzone/OryzoneBoilerplateBundle/zipball/c771961448d96222c79de88172bd4a769e64798c",
+                "reference": "c771961448d96222c79de88172bd4a769e64798c",
+                "shasum": ""
+            },
+            "require": {
+                "components/html5-boilerplate": "4.3.*",
+                "components/jquery": ">=1.10.2,<1.11-dev",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0,<3.0-dev"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Oryzone\\Bundle\\BoilerplateBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luciano Mammino",
+                    "email": "lmammino@oryzone.com",
+                    "homepage": "http://oryzone.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andrea Mangano",
+                    "email": "amangano@oryzone.com",
+                    "homepage": "http://oryzone.com",
+                    "role": "Designer"
+                }
+            ],
+            "description": "Integrates HTML5 boilerplate in symfony2 with twig",
+            "homepage": "https://github.com/Oryzone/OryzoneBoilerplateBundle",
+            "keywords": [
+                "HTML5",
+                "boilerplate",
+                "h5b",
+                "html",
+                "twig"
+            ],
+            "time": "2013-09-23 12:40:25"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -981,6 +1395,50 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "robloach/component-installer",
+            "version": "0.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobLoach/component-installer.git",
+                "reference": "1864f25db21fc173e02a359f646acd596c1b0460"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/1864f25db21fc173e02a359f646acd596c1b0460",
+                "reference": "1864f25db21fc173e02a359f646acd596c1b0460",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "ComponentInstaller\\Installer"
+            },
+            "autoload": {
+                "psr-0": {
+                    "ComponentInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Loach",
+                    "email": "robloach@gmail.com",
+                    "homepage": "http://robloach.net"
+                }
+            ],
+            "description": "Allows installation of Components via Composer.",
+            "time": "2013-08-31 23:46:48"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1635,9 +2093,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "mremi/contact-bundle": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },

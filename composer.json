@@ -22,7 +22,9 @@
         "twitter/bootstrap": "2.3.1",
         "leafo/lessphp": "*",
         "coresphere/console-bundle": "0.1.0",
-        "jquery/jquery": "1.9.1"
+        "jquery/jquery": "1.9.1",
+        "mremi/contact-bundle": "dev-master",
+        "oryzone/boilerplate-bundle": "4.*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -41,7 +43,9 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "component-dir": "web/components",
+        "component-baseurl": "/components"
     },
     "minimum-stability": "stable",
     "extra": {
