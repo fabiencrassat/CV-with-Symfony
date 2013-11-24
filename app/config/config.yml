@@ -5,21 +5,43 @@ imports:
     - { resource: assetic.yml}
 
 framework:
-    #esi:             ~
-    translator:      { fallback: %locale% }
     secret:          %secret%
+    trusted_proxies: ~
+    default_locale:  %locale%
+
+    # esi configuration
+    #esi:             ~
+
+    # translator configuration
+    translator:
+        enabled:     true
+        fallback:    %locale%
+
+    # router configuration
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
+        # set to true to throw an exception when a parameter does not match the requirements
+        # set to false to disable exceptions when a parameter does not match the requirements (and return null instead)
+        # set to null to disable parameter checks against requirements
+        # 'true' is the preferred configuration in development mode, while 'false' or 'null' might be preferred in production
         strict_requirements: ~
+
+    # form configuration
     form:            ~
     csrf_protection: ~
+
+    # validation configuration
     validation:      { enable_annotations: true }
+
+    # templating configuration
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
-    default_locale:  "%locale%"
-    trusted_proxies: ~
+
+    # session configuration
     session:         ~
+
+    # fragments configuration
     fragments:       ~
 
 # Assetic Configuration
@@ -58,3 +80,21 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+# MRemi Contact Configuration
+mremi_contact:
+    store_data:            false
+    contact_class:         Mremi\ContactBundle\Model\Contact
+
+    form:
+        type:              mremi_contact
+        name:              contact_form
+        validation_groups: [Default]
+        subject_provider:  mremi_contact.subject_provider.noop
+        captcha_disabled:  false
+        captcha_type:      genemu_captcha
+
+    email:
+        mailer:            mremi_contact.mailer.twig_swift
+        recipient_address: webmaster@crassat.com
+        template:          MremiContactBundle:Contact:email.txt.twig

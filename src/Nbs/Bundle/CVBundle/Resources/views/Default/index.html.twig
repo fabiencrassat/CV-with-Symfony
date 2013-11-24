@@ -1,6 +1,6 @@
 {# Nbs/Bundle/CVBundle/Resources/views/Default/index.html.twig #}
 
-{% extends "::base.html.twig" %}
+{% extends "NbsCVBundle::base.html.twig" %}
 
 {% block head_meta_keywords %}
 {{ parent() }}{{ cvxmlfile }},
@@ -185,6 +185,10 @@
     </div>
     
     {# Contact Me button and popup #}
+    {% trans_default_domain 'MremiContactBundle' %}
+    <a href="{{ path('mremi_contact_form') }}" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
+        {{ 'mremi_contact.form_page_title'|trans }}
+    </a>
 {#     <a href="{{ path('nbs_cv_contact') }}" data-target="#modalContact" role="button" data-toggle="modal" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
         Contact Me
     </a>
