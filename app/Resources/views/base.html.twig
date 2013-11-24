@@ -15,6 +15,10 @@
   <meta name="robots" content="{% if _robotindex is defined %}{{ _robotindex }}{% else %}noindex{% endif %},nofollow" />
 {% endblock %}
 
+{% block head_meta_keywords %}
+crassat, cv, curriculum vitae,
+{% endblock %}
+
 {% block head_css %}
   {{ parent() }}
   {% stylesheets filter='?yui_css' combine=true '@bootstrap_css' %}

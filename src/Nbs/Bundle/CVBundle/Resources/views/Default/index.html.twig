@@ -2,6 +2,10 @@
 
 {% extends "::base.html.twig" %}
 
+{% block head_meta_keywords %}
+{{ parent() }}{{ cvxmlfile }},
+{% endblock %}
+
 {% block head_css %}
     {{ parent() }}
     {% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
