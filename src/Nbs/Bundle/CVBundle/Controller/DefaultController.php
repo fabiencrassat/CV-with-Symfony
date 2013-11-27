@@ -58,7 +58,6 @@ class DefaultController extends Controller
         };
 
         $language = array(
-            'dropdownTitle' => $translator->trans('Language'),
             'items'         => $dropdownItems
         );
 

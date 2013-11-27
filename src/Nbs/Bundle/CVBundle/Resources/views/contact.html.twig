@@ -2,10 +2,12 @@
 
 {% extends "::base.html.twig" %}
 
-{# body #}
-{% block body %}
-    <div class="container">
+{% block head_css %}
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap.min.css') }}" type="text/css" media="screen"  />
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block body_container_main %}
     {% block contactbody %}
-    {% endblock %}
-    </div>
+    {% endblock contactbody %}
 {% endblock %}

@@ -8,7 +8,11 @@
   <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" />
 {% endblock %}
 
-{% block head_title %}Crassat Site{% endblock %}
+{% block head_title %}
+{% block title %}
+Crassat Site
+{% endblock title %}
+{% endblock %}
 
 {% block head_meta %}
   {{ parent() }}
@@ -21,12 +25,11 @@ crassat, cv, curriculum vitae,
 
 {% block head_css %}
   {{ parent() }}
-  {% stylesheets filter='?yui_css' combine=true '@bootstrap_css' %}
-    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
-  {% endstylesheets %}
   {% stylesheets filter='cssrewrite,?yui_css' combine=true '@base_css' %}
     <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
   {% endstylesheets %}
+  {% block stylesheets %}
+  {% endblock stylesheets %}
 {% endblock %}
 
 {% set bp_body_attributes = "data-spy='scroll' data-target='.navbar'" %}

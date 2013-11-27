@@ -2,8 +2,12 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
-            <trans-unit id="mremi_contact.form_page_title">
-                <source>mremi_contact.form_page_title</source>
+            <trans-unit id="Nbs_contact.language">
+                <source>Nbs_contact.language</source>
+                <target>Language</target>
+            </trans-unit>
+            <trans-unit id="Nbs_contact.form_page_title">
+                <source>Nbs_contact.form_page_title</source>
                 <target>Contact me</target>
             </trans-unit>
             <trans-unit id="Nbs_contact.back_button">

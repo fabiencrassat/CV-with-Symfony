@@ -13,12 +13,7 @@ file that was distributed with this source code.
 
 {% trans_default_domain 'MremiContactBundle' %}
 
-{% block title %}{{ 'mremi_contact.confirm_page_title'|trans }}{% endblock %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap.min.css') }}" type="text/css" media="screen"  />
-    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
-{% endblock %}
+{% block head_title %}{{ 'mremi_contact.confirm_page_title'|trans }}{% endblock %}
 
 {% block contactbody %}
     <section class="well well-large" style="margin-top:20px;">
@@ -27,8 +22,10 @@ file that was distributed with this source code.
             '%fullName%': contact.fullName
         }) }}</h3>
         <p>{{ 'mremi_contact.confirm_message'|trans }}</p>
+        
+{% trans_default_domain 'NbsCVBundle' %}
         <a href="{{ path('nbs_cv_homepage') }}" class="btn btn-default">
-            <span class="glyphicon glyphicon-chevron-left"></span> Retour
+            <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans }}
         </a>
     </section>
 {% endblock contactbody %}

@@ -1,6 +1,8 @@
 {# Nbs/Bundle/CVBundle/Resources/views/Default/index.html.twig #}
 
-{% extends "NbsCVBundle::base.html.twig" %}
+{% extends "::base.html.twig" %}
+
+{% trans_default_domain 'NbsCVBundle' %}
 
 {% block head_meta_keywords %}
 {{ parent() }}{{ cvxmlfile }},
@@ -8,6 +10,9 @@
 
 {% block head_css %}
     {{ parent() }}
+    {% stylesheets filter='?yui_css' combine=true '@bootstrap_css' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
     {% stylesheets filter='cssrewrite, ?yui_css, cssrewrite' combine=true 'bundles/nbscv/css/CurriculumVitae.css' %}
     <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
     {% endstylesheets %}
@@ -27,7 +32,7 @@
           <ul class="nav">
             <li class="dropdown">
               <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-              {{ language.dropdownTitle }} <b class="caret"></b>
+              {{ 'Nbs_contact.language'|trans }} <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 {% for item in language.items %}
@@ -184,10 +189,9 @@
         </section>
     </div>
     
-    {# Contact Me button and popup #}
-    {% trans_default_domain 'MremiContactBundle' %}
+    {# Contact Me button #}
     <a href="{{ path('mremi_contact_form') }}" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
-        {{ 'mremi_contact.form_page_title'|trans }}
+        {{ 'Nbs_contact.form_page_title'|trans }}
     </a>
 {#     <a href="{{ path('nbs_cv_contact') }}" data-target="#modalContact" role="button" data-toggle="modal" class="btn btn-mini btn-inverse" style="position: fixed; top: 100px; right: 0; z-index: 52;">
         Contact Me

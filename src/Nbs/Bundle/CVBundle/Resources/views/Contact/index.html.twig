@@ -15,12 +15,7 @@ file that was distributed with this source code.
 
 {% form_theme form 'MremiContactBundle:Contact:bootstrap_form_theme.html.twig' %}
 
-{% block title %}{{ 'mremi_contact.form_page_title'|trans }}{% endblock %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap.min.css') }}" type="text/css" media="screen"  />
-    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
-{% endblock %}
+{% block head_title %}{{ 'mremi_contact.form_page_title'|trans }}{% endblock %}
 
 {% block contactbody %}
     <section class="well well-large" style="margin-top:20px;">
@@ -48,8 +43,9 @@ file that was distributed with this source code.
         </fieldset>
     {{ form_end(form) }}
 
+{# {% trans_default_domain 'NbsCVBundle' %} #}
     <a href="{{ path('nbs_cv_homepage') }}" class="btn btn-default">
-        <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans }}
+        <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans({}, 'NbsCVBundle') }}
     </a>
     </section>
 {% endblock contactbody %}
