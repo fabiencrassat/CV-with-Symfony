@@ -7,15 +7,15 @@ imports:
 framework:
     secret:          %secret%
     trusted_proxies: ~
-    default_locale:  %locale%
+    # default_locale:  %locale%
 
     # esi configuration
     #esi:             ~
 
     # translator configuration
-    translator:
-        enabled:     true
-        fallback:    %locale%
+    translator: ~
+        # enabled:     true
+        # fallback:    %locale%
 
     # router configuration
     router:
@@ -80,6 +80,13 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+# Services
+services:
+    kernel.listener.LocaleListener:
+        class: Nbs\Bundle\CVBundle\Listener\LocaleListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
 
 # MRemi Contact Configuration
 mremi_contact:

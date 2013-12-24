@@ -8,6 +8,10 @@
 {{ parent() }}{{ cvxmlfile }},
 {% endblock %}
 
+{% block title %}
+CV {{ cvxmlfile|title }} {{ parent() }}
+{% endblock %}
+
 {% block head_css %}
     {{ parent() }}
     {% stylesheets filter='?yui_css' combine=true '@bootstrap_css' %}

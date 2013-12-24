@@ -23,9 +23,8 @@ file that was distributed with this source code.
         }) }}</h3>
         <p>{{ 'mremi_contact.confirm_message'|trans }}</p>
         
-{% trans_default_domain 'NbsCVBundle' %}
-        <a href="{{ path('nbs_cv_homepage') }}" class="btn btn-default">
-            <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans }}
+        <a href="{{ path('nbs_cv_local', {_locale:app.request.locale}) }}" class="btn btn-default">
+            <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans({}, 'NbsCVBundle') }}
         </a>
     </section>
 {% endblock contactbody %}
