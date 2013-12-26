@@ -2,5 +2,5 @@ html {
     background: #eee;
 }
 body {
-    background-color: inherit;
+    background-color: inherit !important;
 }
