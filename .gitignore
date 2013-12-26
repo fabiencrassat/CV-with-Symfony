@@ -4,6 +4,10 @@
 *.tmp
 *.orig
 
+# Google Analytics #
+####################
+google*.html
+
 # Symfony2 #
 ############
 
