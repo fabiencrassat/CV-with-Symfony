@@ -14,6 +14,10 @@
                 <source>Nbs_contact.back_button</source>
                 <target>Retour</target>
             </trans-unit>
+            <trans-unit id="Nbs_contact.back_to_top_button">
+                <source>Nbs_contact.back_to_top_button</source>
+                <target>Haut</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
