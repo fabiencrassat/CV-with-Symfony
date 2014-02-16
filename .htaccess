@@ -1,0 +1,15 @@
+SetEnv PHP_VER 5_3
+ 
+ <IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteBase /web
+ 
+   RewriteCond %{REQUEST_URI} \.(css|gif|ico|jpg|js|png|swf|txt|pdf|doc|docx|mp3|svg)$
+   RewriteRule ^(.*)$ $1 [QSA,L]
+ 
+   RewriteCond %{REQUEST_URI} dev.php
+   RewriteRule ^(.*)$ web/dev.php/$1 [QSA,L]
+ 
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^(.*)$ web/app.php/$1 [QSA,L]
+ </IfModule>

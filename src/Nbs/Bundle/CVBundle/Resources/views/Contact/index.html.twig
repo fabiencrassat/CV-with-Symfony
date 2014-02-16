@@ -1,0 +1,59 @@
+{#
+
+This file is part of the Mremi\ContactBundle Symfony bundle.
+
+(c) Rémi Marseille <marseille.remi@gmail.com>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends "::base.html.twig" %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+
+{% form_theme form 'MremiContactBundle:Contact:bootstrap_form_theme.html.twig' %}
+
+{% block title %}{{ 'mremi_contact.form_page_title'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap.min.css') }}" type="text/css" media="screen"  />
+    <link rel="stylesheet" href="{{ asset('bundles/mremibootstrap/css/bootstrap-theme.min.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block body %}
+    <section class="well well-large" style="margin-top:20px;">
+    {% set novalidate = app.debug and app.request.get('novalidate') %}
+    {% set form_attr = {
+        'class': 'form-horizontal',
+        'role':  'form'
+    } %}
+
+    {% if novalidate %}
+        {{ form_start(form, {
+            'action': path('mremi_contact_form', {'novalidate': 1}),
+            'attr':   form_attr|merge({'novalidate': 'novalidate'})
+        }) }}
+    {% else %}
+        {{ form_start(form, {
+            'action': path('nbs_cv_contact_confirmation', {
+                '_locale':app.request.get('_locale'),
+                'cvxmlfile':app.request.get('cvxmlfile')}),
+            'attr':   form_attr
+        }) }}
+    {% endif %}
+        <fieldset>
+            <legend>{{ 'mremi_contact.form_title'|trans }}</legend>
+
+            {{ form_widget(form) }}
+        </fieldset>
+    {{ form_end(form) }}
+
+    <a href="{{ path('nimbusletruand_curriculumvitae_default', {
+        '_locale':app.request.get('_locale'),
+        'cvxmlfile':app.request.get('cvxmlfile')}) }}" class="btn btn-default">
+        <span class="glyphicon glyphicon-chevron-left"></span> {{ 'Nbs_contact.back_button'|trans({}, 'NbsCVBundle') }}
+    </a>
+    </section>
+{% endblock body %}

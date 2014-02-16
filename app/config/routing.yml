@@ -1,0 +1,8 @@
+nbs_cv:
+    resource: "@NbsCVBundle/Resources/config/routing.yml"
+
+nimbusletruand_curriculumvitae:
+    resource: "@NimbusletruandCurriculumVitaeBundle/Resources/config/routing.yml"
+
+mremi_contact_form:
+    resource: "@MremiContactBundle/Resources/config/routing.xml"

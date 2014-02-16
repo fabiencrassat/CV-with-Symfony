@@ -1,0 +1,22 @@
+nbs_cv_homepage:
+    pattern:    /
+    defaults:
+        _controller:    FrameworkBundle:Redirect:redirect
+        route:          nimbusletruand_curriculumvitae_default
+        permanent:      true
+
+nbs_cv_contact:
+    pattern:       /cv/{cvxmlfile}/{_locale}/contact
+    defaults:
+        _controller:    mremi_contact.contact_controller:indexAction
+        _locale:        en
+        cvxmlfile:      fabien
+
+nbs_cv_contact_confirmation:
+    pattern:       /cv/{cvxmlfile}/{_locale}/contact/confirmation
+    defaults:
+        _controller:    mremi_contact.contact_controller:confirmAction
+        _locale:        en
+        cvxmlfile:      fabien
+    # requirements:
+    #     _method:        GET
