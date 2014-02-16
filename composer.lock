@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b0ceec7a83d0cf22df5413020382b13e",
+    "hash": "e57614270cb54fbec7373aca79d265ff",
     "packages": [
         {
             "name": "components/html5-boilerplate",
@@ -955,7 +955,7 @@
         },
         {
             "name": "nimbusletruand/curriculumvitae",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nimbusletruand/CurriculumVitaeBundle.git",
@@ -1792,8 +1792,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mremi/contact-bundle": 20,
-        "nimbusletruand/curriculumvitae": 20
+        "mremi/contact-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

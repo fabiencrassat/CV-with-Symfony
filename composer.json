@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "Nbs/CVBundle",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "My curriculumvitae site",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -19,7 +19,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "oryzone/boilerplate-bundle": "4.*",
         "mremi/contact-bundle": "dev-master",
-        "nimbusletruand/curriculumvitae": "dev-master"
+        "nimbusletruand/curriculumvitae": "1.*"
     },
     "scripts": {
         "post-install-cmd": [
