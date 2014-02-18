@@ -43,7 +43,7 @@ assetic:
         #yui_css:
         #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
         uglifycss:
-            bin: "%path_to_bin%/node_modules/uglifycss/uglifycss"
+            bin: "%path_to_uglifycss%"
 
 # Swiftmailer Configuration
 swiftmailer:
