@@ -8,8 +8,11 @@ imports:
 # Assetic Configuration
 assetic:
     filters:
+        uglifyjs2:
+            bin:      "%path_to_uglifyjs2%"
+            apply_to: "\.js?"
         uglifycss:
-            bin: "%path_to_uglifycss%"
+            bin:      "%path_to_uglifycss%"
             apply_to: "\.css?"
 
 #doctrine:
