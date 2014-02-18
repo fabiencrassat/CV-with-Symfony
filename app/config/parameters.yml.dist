@@ -1,18 +1,26 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     symfony
-    database_user:     root
-    database_password: ~
+    secret:                  ThisTokenIsNotSoSecretChangeIt
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_user:       ~
-    mailer_password:   ~
+    # Database
+    database_driver:         pdo_mysql
+    database_host:           127.0.0.1
+    database_port:           ~
+    database_name:           symfony
+    database_user:           root
+    database_password:       ~
 
-    locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    # Mailer
+    mailer_transport:        smtp
+    mailer_host:             127.0.0.1
+    mailer_user:             ~
+    mailer_password:         ~
 
-    google_analytics_id: UA-XXXXXXXX-0
+    # Traduction
+    locale:                  en
+
+    # Google Analytics
+    google_analytics_id:     UA-XXXXXXXX-0
     google_analytics_domain: example.com
+
+    # Path to bin
+    path_to_node_modules:    ~
