@@ -4,7 +4,7 @@
 {% block head_css %}
     {{ parent() }}
     {% block stylesheets %}{% endblock %}
-    {% stylesheets '@NbsCVBundle/Resources/public/css/style.css' %}
+    {% stylesheets '@NbsCVBundle/Resources/public/css/style.css' filter='?uglifycss' %}
     <link rel="stylesheet" href="{{ asset_url }}">
     {% endstylesheets %}
 {% endblock %}
