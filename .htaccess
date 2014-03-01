@@ -7,8 +7,8 @@ SetEnv PHP_VER 5_3
    RewriteCond %{REQUEST_URI} \.(css|gif|ico|jpg|js|png|swf|txt|pdf|doc|docx|mp3|svg|woff|ttf)$
    RewriteRule ^(.*)$ $1 [QSA,L]
  
-   RewriteCond %{REQUEST_URI} dev.php
-   RewriteRule ^(.*)$ web/dev.php/$1 [QSA,L]
+   RewriteCond %{REQUEST_URI} app_dev.php
+   RewriteRule ^(.*)$ app_dev.php/$1 [QSA,L]
  
    RewriteCond %{REQUEST_FILENAME} !-f
    RewriteRule ^(.*)$ web/app.php/$1 [QSA,L]
