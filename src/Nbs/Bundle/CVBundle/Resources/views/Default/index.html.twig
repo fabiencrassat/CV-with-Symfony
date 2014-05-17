@@ -7,7 +7,7 @@
 {% block body_container_main %}
 {{ parent() }}
 {# Contact Me button #}
-<a href="{{ path('nbs_cv_contact') }}" class="btn btn-default btn-xs" style="position: fixed; top: 50px; right: 0; z-index: 52;">
+<a href="{{ path('nbs_cv_contact') }}" class="btn btn-default btn-xs hidden-print" style="position: fixed; top: 50px; right: 0; z-index: 52;">
     {{ 'Nbs_contact.contact_button'|trans }}
 </a>
 {% endblock %}

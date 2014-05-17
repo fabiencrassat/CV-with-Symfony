@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e57614270cb54fbec7373aca79d265ff",
+    "hash": "d78f2390d996ebf2333ffc0ee59200cb",
     "packages": [
         {
             "name": "components/html5-boilerplate",
@@ -599,17 +599,17 @@
         },
         {
             "name": "genemu/form-bundle",
-            "version": "v2.2.1",
+            "version": "v2.2.2",
             "target-dir": "Genemu/Bundle/FormBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genemu/GenemuFormBundle.git",
-                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16"
+                "reference": "9fecbe7a12fba1761228909e843301c4d1a11e7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/78fcd307a69b499241d7f0fa5c1b378e77358f16",
-                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/9fecbe7a12fba1761228909e843301c4d1a11e7c",
+                "reference": "9fecbe7a12fba1761228909e843301c4d1a11e7c",
                 "shasum": ""
             },
             "require": {
@@ -621,7 +621,6 @@
                 "doctrine/doctrine-bundle": "1.*",
                 "doctrine/mongodb-odm-bundle": "*",
                 "doctrine/orm": "2.*",
-                "phpunit/phpunit": "3.7.*",
                 "propel/propel-bundle": "*",
                 "symfony/doctrine-bridge": "~2.3",
                 "symfony/finder": "2.*"
@@ -666,7 +665,7 @@
                 "extra form",
                 "form"
             ],
-            "time": "2013-07-31 22:28:58"
+            "time": "2014-03-23 12:12:05"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -793,16 +792,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.7.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/6225b22de9dcf36546be3a0b2fa8e3d986153f57",
-                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
@@ -810,11 +809,11 @@
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4.8",
-                "doctrine/couchdb": "dev-master",
-                "mlehner/gelf-php": "1.0.*",
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
                 "phpunit/phpunit": "~3.7.0",
-                "raven/raven": "0.5.*",
+                "raven/raven": "~0.5",
                 "ruflin/elastica": "0.90.*"
             },
             "suggest": {
@@ -822,19 +821,20 @@
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.9.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -856,7 +856,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-11-14 19:48:31"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "mremi/bootstrap-bundle",
@@ -910,12 +910,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mremi/ContactBundle.git",
-                "reference": "52c2ebb818f3e842b10909acbaec441b3a2446c0"
+                "reference": "7b5d9523b9c5783709d51260d1dd2dd1f3198309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/52c2ebb818f3e842b10909acbaec441b3a2446c0",
-                "reference": "52c2ebb818f3e842b10909acbaec441b3a2446c0",
+                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/7b5d9523b9c5783709d51260d1dd2dd1f3198309",
+                "reference": "7b5d9523b9c5783709d51260d1dd2dd1f3198309",
                 "shasum": ""
             },
             "require": {
@@ -951,28 +951,29 @@
                 "contact",
                 "form"
             ],
-            "time": "2013-11-17 16:04:47"
+            "time": "2014-04-28 20:16:09"
         },
         {
             "name": "nimbusletruand/curriculumvitae",
-            "version": "1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nimbusletruand/CurriculumVitaeBundle.git",
-                "reference": "9238000f9c5960319b27af25c06e4d9a4d38d80f"
+                "url": "https://github.com/fabiencrassat/CurriculumVitaeBundle.git",
+                "reference": "a66b9f797e66da67035b93e3f25f667c94718c36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nimbusletruand/CurriculumVitaeBundle/zipball/9238000f9c5960319b27af25c06e4d9a4d38d80f",
-                "reference": "9238000f9c5960319b27af25c06e4d9a4d38d80f",
+                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/a66b9f797e66da67035b93e3f25f667c94718c36",
+                "reference": "a66b9f797e66da67035b93e3f25f667c94718c36",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.6",
+                "php": ">=5.3.3",
                 "symfony/framework-bundle": "~2.4"
             },
             "suggest": {
-                "oryzone/boilerplate-bundle": "Make the curriculum vitae beautiful"
+                "oryzone/boilerplate-bundle": "Make the curriculum vitae beautiful",
+                "php": "PHP 5.5 is my website version"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -986,8 +987,8 @@
             ],
             "authors": [
                 {
-                    "name": "nimbusletruand",
-                    "email": "nimbusletruand@gmail.com"
+                    "name": "Fabien Crassat",
+                    "email": "fabien@crassat.com"
                 }
             ],
             "description": "Symfony CV bundle",
@@ -996,7 +997,7 @@
                 "cv",
                 "xml"
             ],
-            "time": "2014-02-16 12:40:23"
+            "time": "2014-05-17 23:40:24"
         },
         {
             "name": "oryzone/boilerplate-bundle",
@@ -1292,25 +1293,28 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.0.3",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/043e336b871f17a117f76ef8e190eddfc04c8d48",
+                "reference": "043e336b871f17a117f76ef8e190eddfc04c8d48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -1325,7 +1329,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Chris Corbyn"
@@ -1337,7 +1343,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-12-03 13:33:24"
+            "time": "2014-05-08 08:11:19"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -1404,17 +1410,17 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "cac3fdfb111adbe590155f491594636d45129783"
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/cac3fdfb111adbe590155f491594636d45129783",
-                "reference": "cac3fdfb111adbe590155f491594636d45129783",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975",
                 "shasum": ""
             },
             "require": {
@@ -1447,7 +1453,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-06-03 18:32:07"
+            "time": "2013-10-04 09:12:07"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1513,22 +1519,22 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.5",
+            "version": "v2.3.7",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321"
+                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
-                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
+                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "swiftmailer/swiftmailer": ">=4.2.0,<5.1-dev",
+                "swiftmailer/swiftmailer": ">=4.2.0,~5.0",
                 "symfony/swiftmailer-bridge": "~2.1"
             },
             "require-dev": {
@@ -1540,7 +1546,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -1555,7 +1561,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -1564,20 +1572,20 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-11-21 12:29:01"
+            "time": "2014-04-05 17:15:52"
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.4.2",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b70633f92ff71ef490af4c17e7ca3f3bf3d0f304"
+                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b70633f92ff71ef490af4c17e7ca3f3bf3d0f304",
-                "reference": "b70633f92ff71ef490af4c17e7ca3f3bf3d0f304",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
+                "reference": "4697c33cdfb520dcf83fd6e4f7864fa26ddaebea",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1687,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-02-12 19:27:03"
+            "time": "2014-04-27 13:39:18"
         },
         {
             "name": "twig/extensions",
@@ -1794,7 +1802,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mremi/contact-bundle": 20
+        "mremi/contact-bundle": 20,
+        "nimbusletruand/curriculumvitae": 20
     },
     "platform": {
         "php": ">=5.3.3"
