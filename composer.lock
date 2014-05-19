@@ -959,12 +959,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiencrassat/CurriculumVitaeBundle.git",
-                "reference": "b01ff8d37b18a319540acd5ee8f0819739848797"
+                "reference": "93d0f3ade6d64d01f3da3ab2f924bd339128ee2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/b01ff8d37b18a319540acd5ee8f0819739848797",
-                "reference": "b01ff8d37b18a319540acd5ee8f0819739848797",
+                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/93d0f3ade6d64d01f3da3ab2f924bd339128ee2e",
+                "reference": "93d0f3ade6d64d01f3da3ab2f924bd339128ee2e",
                 "shasum": ""
             },
             "require": {
@@ -997,7 +997,7 @@
                 "cv",
                 "xml"
             ],
-            "time": "2014-05-18 13:46:31"
+            "time": "2014-05-19 23:16:31"
         },
         {
             "name": "oryzone/boilerplate-bundle",
