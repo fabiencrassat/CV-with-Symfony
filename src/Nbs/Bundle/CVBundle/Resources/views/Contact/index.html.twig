@@ -24,25 +24,7 @@ file that was distributed with this source code.
 
 {% block body %}
     <section class="well well-large" style="margin-top:20px;">
-    {% set novalidate = app.debug and app.request.get('novalidate') %}
-    {% set form_attr = {
-        'class': 'form-horizontal',
-        'role':  'form'
-    } %}
-
-    {% if novalidate %}
-        {{ form_start(form, {
-            'action': path('mremi_contact_form', {'novalidate': 1}),
-            'attr':   form_attr|merge({'novalidate': 'novalidate'})
-        }) }}
-    {% else %}
-        {{ form_start(form, {
-            'action': path('nbs_cv_contact_confirmation', {
-                '_locale':app.request.get('_locale'),
-                'cvxmlfile':app.request.get('cvxmlfile')}),
-            'attr':   form_attr
-        }) }}
-    {% endif %}
+    {{ form_start(form, {'action': path('mremi_contact_form')}) }}
         <fieldset>
             <legend>{{ 'mremi_contact.form_title'|trans }}</legend>
 

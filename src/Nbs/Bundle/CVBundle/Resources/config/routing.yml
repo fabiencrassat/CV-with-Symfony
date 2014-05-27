@@ -5,18 +5,16 @@ nbs_cv_homepage:
         path:           /fabien
         permanent:      true
 
-nbs_cv_contact:
+mremi_contact_form:
     path:       /{cvxmlfile}/{_locale}/contact
     defaults:
         _controller:    mremi_contact.contact_controller:indexAction
         _locale:        en
         cvxmlfile:      fabien
 
-nbs_cv_contact_confirmation:
+mremi_contact_confirmation:
     path:       /{cvxmlfile}/{_locale}/contact/confirmation
     defaults:
         _controller:    mremi_contact.contact_controller:confirmAction
         _locale:        en
         cvxmlfile:      fabien
-    # requirements:
-    #     _method:        GET
