@@ -38,3 +38,7 @@ twig:
     globals:
         bp_analytics_id: %google_analytics_id%
         bp_analytics_domain: %google_analytics_domain%
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport_prod%"
