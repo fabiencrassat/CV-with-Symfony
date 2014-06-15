@@ -959,12 +959,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiencrassat/CurriculumVitaeBundle.git",
-                "reference": "510aad3e2905e19c2474f8cd16aad8763c4ce8e6"
+                "reference": "bfe06db82783d989be334dd141083097e3389029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/510aad3e2905e19c2474f8cd16aad8763c4ce8e6",
-                "reference": "510aad3e2905e19c2474f8cd16aad8763c4ce8e6",
+                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/bfe06db82783d989be334dd141083097e3389029",
+                "reference": "bfe06db82783d989be334dd141083097e3389029",
                 "shasum": ""
             },
             "require": {
@@ -972,6 +972,7 @@
                 "symfony/framework-bundle": "~2.4"
             },
             "suggest": {
+                "knplabs/knp-snappy-bundle": "Export your curriculum vitae to PDF",
                 "oryzone/boilerplate-bundle": "Make the curriculum vitae beautiful",
                 "php": "PHP 5.5 is my website version"
             },
@@ -997,7 +998,7 @@
                 "cv",
                 "xml"
             ],
-            "time": "2014-05-27 12:39:29"
+            "time": "2014-06-15 12:37:19"
         },
         {
             "name": "oryzone/boilerplate-bundle",
