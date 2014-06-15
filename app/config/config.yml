@@ -83,7 +83,7 @@ mremi_contact:
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     %kernel.root_dir%/../bin/wkhtmltopdf.exe
+        binary:     %kernel.root_dir%/../bin/wkhtmltopdf
         options:    []
     image:
         enabled:    false

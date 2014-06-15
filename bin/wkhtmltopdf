@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$(uname)" == "Darwin" ]; then
+    # Do something under Mac OS X platform        
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    wkhtmltopdf.bin
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    wkhtmltopdf.exe
+fi
