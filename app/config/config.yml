@@ -78,3 +78,14 @@ mremi_contact:
         mailer:            mremi_contact.mailer.twig_swift
         recipient_address: webmaster@crassat.com
         template:          MremiContactBundle:Contact:email.txt.twig
+
+# knp_snappy Configuration
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     %kernel.root_dir%/../bin/wkhtmltopdf.exe
+        options:    []
+    image:
+        enabled:    false
+        binary:     /usr/local/bin/wkhtmltoimage
+        options:    []

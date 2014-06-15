@@ -4,7 +4,9 @@
     "type": "project",
     "description": "My curriculumvitae site",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -19,6 +21,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "oryzone/boilerplate-bundle": "4.*",
         "mremi/contact-bundle": "dev-master",
+        "knplabs/knp-snappy-bundle": "dev-master",
         "nimbusletruand/curriculumvitae": "dev-master"
     },
     "scripts": {

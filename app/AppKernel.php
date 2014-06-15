@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Mremi\ContactBundle\MremiContactBundle(),
             new Mremi\BootstrapBundle\MremiBootstrapBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
             new Nimbusletruand\CurriculumVitaeBundle\NimbusletruandCurriculumVitaeBundle(),
             new Nbs\Bundle\CVBundle\NbsCVBundle(),
         );
