@@ -33,6 +33,5 @@ assetic:
     use_controller: true
 
 # Swiftmailer Configuration
-swiftmailer:
-    transport: "%mailer_transport_dev%"
+# swiftmailer:
 #    delivery_address: me@example.com
