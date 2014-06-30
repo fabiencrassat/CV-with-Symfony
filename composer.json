@@ -22,7 +22,7 @@
         "oryzone/boilerplate-bundle": "4.*",
         "mremi/contact-bundle": "dev-master",
         "knplabs/knp-snappy-bundle": "dev-master",
-        "nimbusletruand/curriculumvitae": "dev-master"
+        "fabiencrassat/curriculumvitae": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

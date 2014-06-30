@@ -1,5 +1,5 @@
 nbs_cv:
     resource: "@NbsCVBundle/Resources/config/routing.yml"
 
-nimbusletruand_curriculumvitae:
-    resource: "@NimbusletruandCurriculumVitaeBundle/Resources/config/routing.yml"
+fabiencrassat_curriculumvitae:
+    resource: "@FabienCrassatCurriculumVitaeBundle/Resources/config/routing.yml"

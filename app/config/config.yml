@@ -34,7 +34,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        ["OryzoneBoilerplateBundle", "NimbusletruandCurriculumVitaeBundle"]
+    bundles:        ["OryzoneBoilerplateBundle", "FabienCrassatCurriculumVitaeBundle"]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -55,9 +55,9 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-# Nimbusletruand Configuration
-nimbusletruand_curriculum_vitae:
-    path_to_cv:       "Nbs/Bundle/CVBundle/Resources/curriculumvitae"
+# FabienCrassat Configuration
+fabien_crassat_curriculum_vitae:
+    path_to_cv:       "%kernel.root_dir%/../src/Nbs/Bundle/CVBundle/Resources/curriculumvitae"
     custo_default_cv: "fabien"
     template:         "NbsCVBundle:Default:index.html.twig"
 
