@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiencrassat/CurriculumVitaeBundle.git",
-                "reference": "cca9128fab8e4fd1a5435184b3d1116e2b6212b9"
+                "reference": "e6d42988ac9e45019c328644f26729ec8c0d578c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/cca9128fab8e4fd1a5435184b3d1116e2b6212b9",
-                "reference": "cca9128fab8e4fd1a5435184b3d1116e2b6212b9",
+                "url": "https://api.github.com/repos/fabiencrassat/CurriculumVitaeBundle/zipball/e6d42988ac9e45019c328644f26729ec8c0d578c",
+                "reference": "e6d42988ac9e45019c328644f26729ec8c0d578c",
                 "shasum": ""
             },
             "require": {
@@ -654,7 +654,7 @@
                 "cv",
                 "xml"
             ],
-            "time": "2014-06-30 11:45:53"
+            "time": "2014-07-05 00:31:32"
         },
         {
             "name": "genemu/form-bundle",
