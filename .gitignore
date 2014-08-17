@@ -3,9 +3,13 @@
 *.bat
 *.tmp
 *.orig
+*.phar
 web/*
 !web/apple-touch-icon.png
 !web/favicon.ico
+bin/.composer
+bin/uglifycss
+bin/uglify-js
 
 # Google Analytics #
 ####################

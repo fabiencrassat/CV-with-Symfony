@@ -1,5 +1,5 @@
 {
-    "name": "Nbs/CVBundle",
+    "name": "fabiencrassat/cv-bundle",
     "license": "MIT",
     "type": "project",
     "description": "My curriculumvitae site",
@@ -22,6 +22,7 @@
         "oryzone/boilerplate-bundle": "4.*",
         "mremi/contact-bundle": "dev-master",
         "knplabs/knp-snappy-bundle": "dev-master",
+        "leaseweb/automatic-update-bundle": "*",
         "fabiencrassat/curriculumvitae": "~0.4"
     },
     "scripts": {
@@ -43,7 +44,9 @@
     "config": {
         "bin-dir": "bin",
         "component-dir": "web/components",
-        "component-baseurl": "/components"
+        "component-baseurl": "/components",
+        "cache-dir":"bin/.composer",
+        "home":"bin/.composer"
     },
     "extra": {
         "symfony-app-dir": "app",

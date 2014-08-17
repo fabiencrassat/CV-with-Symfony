@@ -10,5 +10,8 @@ _configurator:
     resource: "@SensioDistributionBundle/Resources/config/routing/webconfigurator.xml"
     prefix:   /_configurator
 
+_automatic_update:
+    resource: "@LswAutomaticUpdateBundle/Resources/config/routing/update.yml"
+
 _main:
     resource: routing.yml
