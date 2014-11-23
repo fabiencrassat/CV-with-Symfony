@@ -4,7 +4,7 @@
 *.tmp
 *.orig
 *.phar
-web/*
+web/app_dev.php
 !web/apple-touch-icon.png
 !web/favicon.ico
 bin/.composer
