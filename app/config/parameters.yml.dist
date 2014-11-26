@@ -26,3 +26,9 @@ parameters:
     path_to_bin:             ~
     path_to_uglifycss:       %path_to_bin%
     path_to_uglifyjs2:       %path_to_bin%
+
+    # Automatic Update
+    automatic_update.options:   ~
+        secret:                 ~
+        dry_run_commands:       ~
+        execute_commands:       ~
