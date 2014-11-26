@@ -36,10 +36,10 @@ assetic:
     use_controller: false
     bundles:        ["OryzoneBoilerplateBundle", "FabienCrassatCurriculumVitaeBundle"]
     #Use the following link to avoid the is_dir(): open_basedir restriction in effect
-    java:           "%kernel.root_dir%/../bin/java"
-    node:           "%kernel.root_dir%/../bin/node"
-    ruby:           "%kernel.root_dir%/../bin/ruby"
-    sass:           "%kernel.root_dir%/../bin/sass"
+    java:           "%kernel.root_dir%/../../../bin/java"
+    node:           "%kernel.root_dir%/../../../bin/node"
+    ruby:           "%kernel.root_dir%/../../../bin/ruby"
+    sass:           "%kernel.root_dir%/../../../bin/sass"
     filters:
         cssrewrite: ~
         #closure:
