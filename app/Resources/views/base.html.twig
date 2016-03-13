@@ -1,12 +1,13 @@
-{% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
-
-{% block head_title %}{% block title %}{% endblock %}{% endblock %}
-{% block head_css %}
-    {{ parent() }}
-    {% block stylesheets %}{% endblock %}
-    {% stylesheets '@NbsCVBundle/Resources/public/css/style.css' filter='?uglifycss' %}
-    <link rel="stylesheet" href="{{ asset_url }}">
-    {% endstylesheets %}
-{% endblock %}
-{% block body_container_main %}{% block body %}{% endblock %}{% endblock %}
-{% block body_js %}{{ parent() }}{% block javascripts %}{% endblock %}{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

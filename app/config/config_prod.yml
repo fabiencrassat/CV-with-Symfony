@@ -3,17 +3,9 @@ imports:
 
 #framework:
 #    validation:
-#        cache: apc
-
-# Assetic Configuration
-assetic:
-    filters:
-        uglifyjs2:
-            bin:      "%path_to_uglifyjs2%"
-            apply_to: "\.js?"
-        uglifycss:
-            bin:      "%path_to_uglifycss%"
-            apply_to: "\.css?"
+#        cache: validator.mapping.cache.doctrine.apc
+#    serializer:
+#        cache: serializer.mapping.cache.doctrine.apc
 
 #doctrine:
 #    orm:

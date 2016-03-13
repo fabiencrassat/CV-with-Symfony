@@ -1,13 +1,9 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
+    # A secret key that's used to generate certain security-related tokens
     secret:                  ThisTokenIsNotSoSecretChangeIt
-
-    # Database
-    database_driver:         pdo_mysql
-    database_host:           127.0.0.1
-    database_port:           ~
-    database_name:           symfony
-    database_user:           root
-    database_password:       ~
 
     # Mailer
     mailer_transport:        smtp
@@ -15,20 +11,6 @@ parameters:
     mailer_user:             ~
     mailer_password:         ~
 
-    # Traduction
-    locale:                  en
-
-    # Google Analytics
+# Google Analytics
     google_analytics_id:     UA-XXXXXXXX-0
     google_analytics_domain: example.com
-
-    # Path to bin
-    path_to_bin:             ~
-    path_to_uglifycss:       %path_to_bin%
-    path_to_uglifyjs2:       %path_to_bin%
-
-    # Automatic Update
-    automatic_update.options:   ~
-        secret:                 ~
-        dry_run_commands:       ~
-        execute_commands:       ~
