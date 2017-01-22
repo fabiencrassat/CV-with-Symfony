@@ -75,6 +75,11 @@
                 <url>http://www.scrumalliance.org/community/profile/fcrassat</url>
                 <icon>bundles/fabiencrassatcurriculumvitae/img/scrum-alliance.png</icon>
             </followItem>
+            <followItem id="github">
+                <title>GitHub</title>
+                <url>https://github.com/fabiencrassat</url>
+                <icon>bundles/fabiencrassatcurriculumvitae/img/github.png</icon>
+            </followItem>
         </items>
     </followMe>
     <lookingFor>
