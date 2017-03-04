@@ -1,3 +1,5 @@
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/7c871a0f-c0b5-470a-b826-d834de55c46a/big.png)](https://insight.sensiolabs.com/projects/7c871a0f-c0b5-470a-b826-d834de55c46a)
+
 fabiencrassat / CV Bundle
 ==========================
 
