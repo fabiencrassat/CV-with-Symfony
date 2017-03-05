@@ -8,7 +8,6 @@ google*.html
 # Bootstrap
 app/bootstrap.php.cache
 
-
 # Symfony directories
 vendor/*
 */logs/*
@@ -22,6 +21,7 @@ web/js/*
 
 # Configuration files
 app/config/parameters.yml
+web/config.php
 
 # Compiled source #
 ###################

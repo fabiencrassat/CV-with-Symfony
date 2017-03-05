@@ -5,7 +5,7 @@
     "description": "My curriculumvitae site",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "Nbs\\Bundle\\CVBundle\\": "src/"
         },
         "classmap": [
             "app/AppKernel.php",
