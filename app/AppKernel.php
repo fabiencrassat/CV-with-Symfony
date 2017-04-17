@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new Oryzone\Bundle\BoilerplateBundle\OryzoneBoilerplateBundle(),
             new Mremi\ContactBundle\MremiContactBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new A5sys\PdfBundle\A5sysPdfBundle(),
             new FabienCrassat\CurriculumVitaeBundle\FabienCrassatCurriculumVitaeBundle(),
             new Nbs\Bundle\CVBundle\NbsCVBundle(),
         );

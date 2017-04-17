@@ -24,8 +24,9 @@
         "oryzone/boilerplate-bundle": "4.*",
         "mremi/contact-bundle": "1.3.*",
         "genemu/form-bundle": "2.2.*",
-        "knplabs/knp-snappy-bundle": "1.4.*",
-        "fabiencrassat/curriculumvitae": "0.7.*"
+        "a5sys/pdf-bundle": "dev-master",
+        "mikehaertl/phpwkhtmltopdf": "~2.0",
+        "fabiencrassat/curriculumvitae": "~0.8"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
