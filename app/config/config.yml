@@ -76,13 +76,13 @@ mremi_contact:
             - {address: webmaster@crassat.com, name: Webmaster}
         template:          MremiContactBundle:Contact:email.txt.twig
 
-# knp_snappy Configuration
-knp_snappy:
-    pdf:
-        enabled:    true
-        binary:     %kernel.root_dir%/../bin/wkhtmltopdf
-        options:    []
-    image:
-        enabled:    false
-        binary:     /usr/local/bin/wkhtmltoimage
-        options:    []
+a5sys_pdf:
+    binary: "%kernel.root_dir%/../bin/wkhtmltopdf"
+    # temp_dir: "D:/tmp"
+    # encoding: "UTF-8"
+    # command_options:
+    #    use_exec: true
+    #    escape_args: false
+    #    proc_options:
+    #        bypass_shell: true
+    #        suppress_errors: false
