@@ -86,3 +86,9 @@ a5sys_pdf:
     #    proc_options:
     #        bypass_shell: true
     #        suppress_errors: false
+
+netinfluence_secure_display:
+    # Required, key used to encrypt data
+    key: "%secret%"
+    # Optional, you can customize used template here
+    template: 'NetinfluenceSecureDisplayBundle::secure_display.html.twig'

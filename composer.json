@@ -26,7 +26,9 @@
         "genemu/form-bundle": "2.2.*",
         "a5sys/pdf-bundle": "dev-master",
         "mikehaertl/phpwkhtmltopdf": "~2.0",
-        "fabiencrassat/curriculumvitae": "~0.8"
+        "friendsofsymfony/jsrouting-bundle": "~1.6",
+        "netinfluence/secure-display-bundle": "~1.1",
+        "fabiencrassat/curriculumvitae": "~1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

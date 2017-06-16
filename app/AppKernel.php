@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Mremi\ContactBundle\MremiContactBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new A5sys\PdfBundle\A5sysPdfBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new Netinfluence\SecureDisplayBundle\NetinfluenceSecureDisplayBundle(),
             new FabienCrassat\CurriculumVitaeBundle\FabienCrassatCurriculumVitaeBundle(),
             new Nbs\Bundle\CVBundle\NbsCVBundle(),
         );
