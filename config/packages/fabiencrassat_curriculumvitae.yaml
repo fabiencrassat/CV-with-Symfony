@@ -1,0 +1,4 @@
+fabien_crassat_curriculum_vitae:
+  path_to_cv:       "%kernel.root_dir%/resources/curriculumvitae"
+  custo_default_cv: "fabien"
+  template:         "@FabienCrassatCurriculumVitae/CurriculumVitae/OryzoneBoilerplate.html.twig"
