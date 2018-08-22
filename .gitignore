@@ -1,29 +1,16 @@
-# Google Analytics #
-####################
-google*.html
 
-# Symfony2 #
-############
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
 
-# Bootstrap
-app/bootstrap.php.cache
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
 
-# Symfony directories
-vendor/*
-*/logs/*
-!app/logs/.gitkeep
-*/cache/*
-!app/cache/.gitkeep
-web/bundles/*
-web/components/*
-web/css/*
-web/js/*
-
-# Configuration files
-app/config/parameters.yml
-web/config.php
-
-# Compiled source #
-###################
-*.exe
-*.bin
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
